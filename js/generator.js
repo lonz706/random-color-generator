@@ -1,5 +1,12 @@
 function generateHexColorCode() {
-	return '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+	var letters = '0123456789ABCDEF',
+		color   = '#';
+
+	for(var i = 0; i < 6; i++) {
+		color += letters[Math.floor(Math.random() * 16)];
+	}
+
+	return color;
 }
 
 for(columnId = 1; columnId <= 5; columnId++) {
